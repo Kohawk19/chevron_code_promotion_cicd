@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>global.OAuthDevOpsGitHubHandler</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>OAuthDevOpsGitHubHandler</name>
+        <script><![CDATA[var OAuthGitHubHandler = Class.create();
+OAuthGitHubHandler.prototype = Object.extendsObject(OAuthUtil,  {
+	// Override postprocessAccessToken method. GitHub returns a urlencoded
+	// body, so we need to break this apart and extract the values. 
+	postprocessAccessToken: function(accessTokenResponse) {
+		var contentType = accessTokenResponse.getContentType();
+		var contentBody = accessTokenResponse.getBody(); 
+		var paramMap = accessTokenResponse.getparameters();
+		var params = contentBody.split('&'); 
+		var parts; 
+		
+		params.forEach(function(param) {
+			parts = param.split('=');
+			paramMap.put(parts[0], parts[1]);
+		});
+		
+		// GitHub tokens do not expire, hardcode expiration to something far away
+		paramMap.put('expires_in', '365246060'); 
+	},
+	
+	type: 'OAuthGitHubHandler'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>12368289</sys_created_by>
+        <sys_created_on>2021-07-28 19:14:17</sys_created_on>
+        <sys_id>b66a2f76db257c503bfa531dd3961984</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>OAuthDevOpsGitHubHandler</sys_name>
+        <sys_package display_value="gitHubCICD" source="7391abb2db217c503bfa531dd39619f7">7391abb2db217c503bfa531dd39619f7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="gitHubCICD">7391abb2db217c503bfa531dd39619f7</sys_scope>
+        <sys_update_name>sys_script_include_b66a2f76db257c503bfa531dd3961984</sys_update_name>
+        <sys_updated_by>12368289</sys_updated_by>
+        <sys_updated_on>2021-07-28 19:14:17</sys_updated_on>
+    </sys_script_include>
+</record_update>

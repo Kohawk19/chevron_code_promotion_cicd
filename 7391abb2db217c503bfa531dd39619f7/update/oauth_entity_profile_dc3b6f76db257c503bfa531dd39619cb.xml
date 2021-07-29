@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="oauth_entity_profile">
+    <oauth_entity_profile action="INSERT_OR_UPDATE">
+        <default>true</default>
+        <grant_type>authorization_code</grant_type>
+        <jwt_provider/>
+        <name>Chevron GitHub App Provider default_profile</name>
+        <oauth_entity display_value="Chevron GitHub App Provider">dfb4e37edb617c503bfa531dd3961940</oauth_entity>
+        <sys_class_name>oauth_entity_profile</sys_class_name>
+        <sys_created_by>12368289</sys_created_by>
+        <sys_created_on>2021-07-28 19:16:58</sys_created_on>
+        <sys_id>dc3b6f76db257c503bfa531dd39619cb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Chevron GitHub App Provider default_profile</sys_name>
+        <sys_package display_value="gitHubCICD" source="7391abb2db217c503bfa531dd39619f7">7391abb2db217c503bfa531dd39619f7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="gitHubCICD">7391abb2db217c503bfa531dd39619f7</sys_scope>
+        <sys_update_name>oauth_entity_profile_dc3b6f76db257c503bfa531dd39619cb</sys_update_name>
+        <sys_updated_by>12368289</sys_updated_by>
+        <sys_updated_on>2021-07-28 19:16:58</sys_updated_on>
+    </oauth_entity_profile>
+</record_update>
