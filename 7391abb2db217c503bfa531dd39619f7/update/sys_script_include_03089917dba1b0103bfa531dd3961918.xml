@@ -9,20 +9,20 @@
         <name>testcicdscript</name>
         <script><![CDATA[var testcicdscript = Class.create();
 testcicdscript.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
-//new feature
+//new feature sending to git
     type: 'testcicdscript'
 });]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>12365043</sys_created_by>
         <sys_created_on>2021-07-29 21:51:55</sys_created_on>
         <sys_id>03089917dba1b0103bfa531dd3961918</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>testcicdscript</sys_name>
         <sys_package display_value="gitHubCICD" source="7391abb2db217c503bfa531dd39619f7">7391abb2db217c503bfa531dd39619f7</sys_package>
         <sys_policy/>
         <sys_scope display_value="gitHubCICD">7391abb2db217c503bfa531dd39619f7</sys_scope>
         <sys_update_name>sys_script_include_03089917dba1b0103bfa531dd3961918</sys_update_name>
         <sys_updated_by>12365043</sys_updated_by>
-        <sys_updated_on>2021-07-29 21:51:55</sys_updated_on>
+        <sys_updated_on>2021-08-01 22:22:18</sys_updated_on>
     </sys_script_include>
 </record_update>
