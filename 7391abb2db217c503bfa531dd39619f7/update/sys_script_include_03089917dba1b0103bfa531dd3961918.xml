@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>global.testcicdscript</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>testcicdscript</name>
+        <script><![CDATA[var testcicdscript = Class.create();
+testcicdscript.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+//new feature
+    type: 'testcicdscript'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>12365043</sys_created_by>
+        <sys_created_on>2021-07-29 21:51:55</sys_created_on>
+        <sys_id>03089917dba1b0103bfa531dd3961918</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>testcicdscript</sys_name>
+        <sys_package display_value="gitHubCICD" source="7391abb2db217c503bfa531dd39619f7">7391abb2db217c503bfa531dd39619f7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="gitHubCICD">7391abb2db217c503bfa531dd39619f7</sys_scope>
+        <sys_update_name>sys_script_include_03089917dba1b0103bfa531dd3961918</sys_update_name>
+        <sys_updated_by>12365043</sys_updated_by>
+        <sys_updated_on>2021-07-29 21:51:55</sys_updated_on>
+    </sys_script_include>
+</record_update>
