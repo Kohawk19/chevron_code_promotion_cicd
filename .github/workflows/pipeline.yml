@@ -17,7 +17,6 @@ jobs:
     # if: ${{ github.event_name == 'pull_request'}}
 
     steps:
-
       - name: ServiceNow CI/CD Apply Changes
         uses: ServiceNow/sncicd-apply-changes@2.0.0
         env:
@@ -60,9 +59,11 @@ jobs:
     
     steps:
 
+
+
       - name: ServiceNow CI/CD Install App
         id: install_app
-        uses: ServiceNow/sncicd-install-app@1.0.0
+        uses: ServiceNow/sncicd-install-app@2.0.0
         with:
           version: ${{ needs.build.outputs.publishversion }}
           # Only applicable if Application Customization is active. 
