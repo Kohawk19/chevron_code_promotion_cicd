@@ -27,7 +27,7 @@ jobs:
 
       - name: ServiceNow CI/CD Publish App
         id: publish_app
-        uses: ServiceNow/sncicd-publish-app@2.0.0
+        uses: ServiceNow/sncicd-publish-app@2.0.1
         with:
           versionTemplate: 1.1
           versionFormat: template
@@ -90,7 +90,7 @@ jobs:
 
       - name: ServiceNow CI/CD Rollback App
         if: ${{ failure() && steps.install_app.outputs.rollbackVersion }}
-        uses: ServiceNow/sncicd-rollback-app@1.0.0
+        uses: ServiceNow/sncicd-rollback-app@2.0.0
         with:
           version: ${{steps.install_app.outputs.rollbackVersion}}
         env:
@@ -119,7 +119,7 @@ jobs:
     
       - name: ServiceNow CI/CD Install App
         id: install_app_prod
-        uses: ServiceNow/sncicd-install-app@1.0.0
+        uses: ServiceNow/sncicd-install-app@2.0.0
         with:
           version: ${{ needs.test.outputs.publishversion }}
           # Only applicable if Application Customization is active. 
